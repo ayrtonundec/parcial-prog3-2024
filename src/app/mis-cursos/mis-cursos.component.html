@@ -1,0 +1,14 @@
+<div *ngIf="mensajeError; else listaCursos">
+    {{ mensajeError }}
+  </div>
+  
+  <ng-template #listaCursos>
+    <ul>
+      <li *ngFor="let curso of cursos">
+        <h3>{{ curso.nombre }}</h3>
+        <p>{{ curso.descripcion }}</p>
+        <span>Duración: {{ curso.duracion }}</span>
+      </li>
+    </ul>
+  </ng-template>
+  
